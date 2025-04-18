@@ -1,0 +1,21 @@
+{
+  "name": "@clip-fish/ws-server",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon --watch src src/index.js",
+    "lint":  "eslint src --ext .js",
+    "test":  "echo \"No tests yet\" && exit 0"
+  },
+  "keywords": ["webrtc","signaling","clip-fish"],
+  "license": "MIT",
+  "description": "WebSocket signaling server for Clip Fish",
+  "dependencies": {
+    "ws": "^8.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "eslint": "^9.24.0"
+  }
+}
