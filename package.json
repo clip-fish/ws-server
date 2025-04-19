@@ -1,11 +1,12 @@
 {
   "name": "@clip-fish/ws-server",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon --watch src src/index.js",
-    "lint":  "eslint src --ext .js",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev":   "ts-node-dev --respawn src/index.ts",
+    "lint":  "eslint 'src/**/*.{ts,js}'",
     "test":  "echo \"No tests yet\" && exit 0"
   },
   "keywords": ["webrtc","signaling","clip-fish"],
@@ -15,7 +16,10 @@
     "ws": "^8.18.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.22",
-    "eslint": "^9.24.0"
+    "@types/node": "^22.14.1",
+    "@types/ws": "^8.5.4",
+    "eslint": "^9.25.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
   }
 }
